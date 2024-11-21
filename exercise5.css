@@ -79,6 +79,12 @@ header {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     container-type: inline-size;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
 
     &.featured {
         border-color: var(--color-primary);
@@ -129,12 +135,8 @@ header {
 
   
 
-    &:not(:has(img)) {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
+    &:has(img) {
+        justify-content: flex-start;
     }
 
 }
